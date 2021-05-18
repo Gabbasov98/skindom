@@ -519,6 +519,9 @@ li {
         background: #000000;
         border-radius: 4px;
         margin-top: 30px;
+        &:hover {
+            opacity: 0.8;
+        }
     }
 }
 
