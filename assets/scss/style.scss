@@ -896,3 +896,210 @@ li {
         display: block;
     }
 }
+
+.catalog {
+    padding-top: 40px;
+    padding-bottom: 70px;
+    &__inner {
+        @include flex;
+        @include j-c;
+    }
+    &__group {
+        width: calc(50% - 47px);
+        @include flex;
+        @include wrap;
+    }
+    &__single {
+        width: calc(50% - 47px);
+    }
+    &__single-top {
+        @include flex;
+        justify-content: center;
+        @include al-i(center);
+        padding: 59px 0;
+        background: #F3F3F3;
+    }
+    &__card {
+        width: calc(50% - 19px);
+        margin-bottom: 88px;
+        &:nth-child(odd) {
+            margin-right: 38px;
+        }
+    }
+    &__card-top {
+        background: #F3F3F3;
+        padding: 75px 0;
+        @include flex;
+        justify-content: center;
+        @include al-i(center);
+    }
+    &__card-title {
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 20px;
+        margin-top: 24px;
+        margin-left: 24px;
+        letter-spacing: 1.5px;
+        color: #1A1A1A;
+    }
+    &__card-bottom p {
+        margin-top: 11px;
+        margin-left: 24px;
+        @include flex;
+        @include al-i(center);
+    }
+    &__card-desc {
+        font-size: 12px;
+        line-height: 18px;
+        color: #5C5C66;
+        margin-right: 30px;
+    }
+    &__card-price {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        color: #1A1A1A;
+    }
+    &__single-desc {
+        font-family: "Open Sans";
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 130%;
+        color: #828282;
+        margin-left: 69px;
+        margin-top: -50px;
+    }
+    &__single-title {
+        font-family: "Bebas Neue";
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 130%;
+        letter-spacing: 0.0375em;
+        margin-left: 69px;
+    }
+    &__single-price {
+        font-family: "Open Sans";
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 130%;
+        margin-top: 10px;
+        margin-left: 69px;
+    }
+}
+
+.catalog-filter {
+    margin-top: 42px;
+    &__inner {
+        @include flex;
+    }
+    &__item {
+        margin-right: 30px;
+        width: 120px;
+        position: relative;
+        &:hover .catalog-filter__hidden {
+            display: block;
+        }
+        &:hover .catalog-filter__show {
+            color: #D785A1;
+        }
+    }
+    &__show {
+        padding-bottom: 8px;
+        border-bottom: 1px solid #000;
+        font-size: 16px;
+        line-height: 19px;
+        width: 100%;
+        cursor: pointer;
+    }
+    &__hidden {
+        width: 100%;
+        display: none;
+        position: absolute;
+        background: #FFFFFF;
+        border: 1px solid #F3F3F3;
+        padding: 11px 13px 16px;
+        height: 118px;
+        overflow-y: scroll;
+        bottom: -5px;
+        transform: translateY(100%);
+        & input {
+            width: 100%;
+            border: none;
+            padding: 5px 1px;
+            border-bottom: 1px solid #F3F3F3;
+            font-size: 12px;
+            line-height: 14px;
+            outline: none;
+            &::placeholder {
+                color: #CACACA;
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+        & p {
+            margin-top: 8px;
+            font-size: 12px;
+            line-height: 14px;
+            /* identical to box height */
+            /* Grey */
+            color: #828282;
+            cursor: pointer;
+        }
+        &::-webkit-scrollbar {
+            width: 1px;
+        }
+        &::-webkit-scrollbar-track {
+            background: #fff;
+            width: 1px;
+            height: 39px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #000;
+        }
+    }
+}
+
+.profile {
+    margin-top: 107px;
+    &__inner {
+        @include flex;
+    }
+}
+
+.aside {
+    width: 370px;
+    margin-right: 270px;
+    .user {
+        @include flex;
+        @include al-i(center);
+        &__name {
+            margin-right: 15px;
+            font-size: 32px;
+            line-height: 150%;
+            display: block;
+            height: 100%;
+        }
+        &__bonus {
+            color: #CACACA;
+            margin-top: 10px;
+        }
+    }
+    &__menu {
+        margin-top: 42px;
+        width: 240px;
+        margin-right: 0;
+        margin-left: auto;
+        font-size: 24px;
+        line-height: 200%;
+        color: #828282;
+    }
+    &__menu-item--active {
+        color: #000;
+    }
+    &__menu-item:hover {
+        color: #000;
+        cursor: pointer;
+    }
+}
