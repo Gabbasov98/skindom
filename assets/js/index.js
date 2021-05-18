@@ -106,4 +106,37 @@ $(document).ready(function() {
     sliderRecomend()
     sliderInterest()
     sliderSame()
+
+
+    // Реализация табов
+    const tabsBtn = $(".tabs__item");
+    const tabsContent = $(".tabs__content");
+
+    $(".tabs__item").click(function(e) {
+        let tabsPath = e.target.dataset.tabsPath;
+        tabsHandler(tabsPath);
+    })
+
+    // $(".tabs__filter").click(function() {
+    //     $(".mob-hide").show();
+    // })
+
+    function tabsHandler(path) {
+
+        $.each(tabsBtn, function(index, value) {
+                $(value).removeClass("tabs__item--active")
+                $(`.tabs__item[data-tabs-path=${ path }]`).addClass("tabs__item--active")
+            })
+            // if ($(window).width() < 768) {
+            //     $(".tabs__item").addClass("mob-hide")
+            //     $(".tabs__item--active").removeClass("mob-hide")
+            //     $(".mob-hide").hide();
+            // }
+        $.each(tabsContent, function(index, value) {
+            $(value).removeClass("tabs__content--active")
+            $(`.tabs__content[data-tabs-target=${ path }]`).addClass("tabs__content--active")
+        })
+
+
+    }
 });
