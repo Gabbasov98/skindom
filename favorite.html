@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Личный профиль</title>
+    <title>Избранное</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -99,8 +99,8 @@
                         <div class="aside__menu ">
                             <p class="aside__menu-item">мои карты</p>
                             <p class="aside__menu-item">мои клиентские дни</p>
-                            <p class="aside__menu-item aside__menu-item--active ">личная информация</p>
-                            <p class="aside__menu-item">избранное</p>
+                            <p class="aside__menu-item ">личная информация</p>
+                            <p class="aside__menu-item aside__menu-item--active ">избранное</p>
                             <p class="aside__menu-item">мои покупки</p>
                             <p class="aside__menu-item">чат с консультантом</p>
                             <p class="aside__menu-item">настройки</p>
@@ -108,46 +108,98 @@
                         </div>
                     </aside>
                     <main class="main">
-                        <h1 class="profile__title">Личная информация</h1>
-                        <p class="profile__desc">Заполните профиль и получите 10% бонусную карту</p>
-                        <form action="">
-                            <input type="text" placeholder="Фамилия">
-                            <input type="text" placeholder="Имя">
-                            <input type="text" placeholder="Отчество">
-                            <p class="radio__item">
-                                <label>
-                                    <input value="Мужской" name="sex" class="radio" type="radio">
-                                    <span class="radio-style"></span>
-                                </label>
-                                <span>Мужской</span>
-                            </p>
-                            <p class="radio__item">
-                                <label>
-                                    <input checked value="Женский" name="sex" class="radio" type="radio">
-                                    <span class="radio-style"></span>
-                                </label>
-                                <span>Женский</span>
-                            </p>
-                            <p class="radio__item last">
-                                <label>
-                                    <input value="Не указан" name="sex" class="radio" type="radio">
-                                    <span class="radio-style"></span>
-                                </label>
-                                <span>Не указан</span>
-                            </p>
-                            <input type="text" onfocus="(this.type='date')" placeholder="Дата рождения" name="" id="">
-                            <input type="email" name="" id="" placeholder="Ваша почта">
-                            <p class="profile__phone">
-                                <input type="tel" name="" id="">
-                                <span></span>
-                            </p>
-                            <input type="tel" name="" placeholder="Город" id="">
-                            <p class="profile__agree">
-                                <input type='checkbox' class='checkbox' id='c'>
-                                <label for='c'>Я даю согласие на обработку своих персональных данных в соответсвии с <a href="#">Политикой в отношении обработки персональных данных</a> и <a href="#">Пользовательским соглашением.</a></label>
-                            </p>
-                            <button>Зарегистрироваться</button>
-                        </form>
+                        <h1 class="profile__title">Мой лист пожеланий</h1>
+
+                        <div class="favorite">
+                            <p class="favorite__empty">В листе пожеланий пусто.</p>
+                            <div class="favorite__items">
+                                <div class="favorite__item">
+                                    <div class="favorite__img">
+                                        <img src="assets/images/favorite1.png" alt="">
+                                    </div>
+                                    <div class="favorite__info">
+                                        <p class="favorite__desc">Комплекс для выпрямления волос c экстрактом хны</p>
+                                        <h3 class="favorite__title">R&B Henna Spa Therapy Magic Straight Cream</h3>
+                                        <div class="favorite__bottom">
+                                            <div class="favorite__buttons">
+                                                <button>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M2 8.39995C1.99975 6.95029 2.58239 5.5614 3.61681 4.54578C4.65124 3.53016 6.05058 2.97311 7.5 2.99995C9.21732 2.99083 10.856 3.71913 12 4.99995C13.144 3.71913 14.7827 2.99083 16.5 2.99995C17.9494 2.97311 19.3488 3.53016 20.3832 4.54578C21.4176 5.5614 22.0002 6.95029 22 8.39995C22 13.7559 15.621 17.7999 12 20.9999C8.387 17.7729 2 13.7599 2 8.39995Z" fill="black"/>
+                                                    </svg>
+                                                </button>
+                                                <button>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M21.9209 22.9975L20.4604 6.73362C20.4206 6.28947 20.0483 5.94926 19.6025 5.94926H16.5908V4.59096C16.5908 2.05951 14.5314 0 12.0001 0C9.46884 0 7.40968 2.05951 7.40968 4.59096V5.94926H4.39594C3.95006 5.94926 3.57781 6.28947 3.53796 6.73362L2.0718 23.0615C2.05021 23.3025 2.13084 23.5413 2.29405 23.7197C2.45726 23.8982 2.68801 23.9999 2.92979 23.9999H21.0687C21.0694 23.9999 21.0703 23.9999 21.071 23.9999C21.5469 23.9999 21.9325 23.6142 21.9325 23.1385C21.9323 23.0906 21.9284 23.0434 21.9209 22.9975ZM9.13254 4.59096C9.13254 3.00949 10.4189 1.72286 12.0002 1.72286C13.5815 1.72286 14.8681 3.00949 14.8681 4.59096V5.94926H9.13254V4.59096ZM3.87208 22.2771L5.18352 7.67212H7.40968V9.21259C7.40968 9.68832 7.79526 10.074 8.27111 10.074C8.74696 10.074 9.13254 9.68832 9.13254 9.21259V7.67212H14.8681V9.21259C14.8681 9.68832 15.2536 10.074 15.7295 10.074C16.2053 10.074 16.5909 9.68832 16.5909 9.21259V7.67212H18.815L20.1264 22.2771H3.87208Z" fill="black"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="favorite__prices">
+                                                <span class="low">2300 руб</span>
+                                                <span>1300 руб</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="favorite__item">
+                                    <div class="favorite__img">
+                                        <img src="assets/images/favorite2.png" alt="">
+                                    </div>
+                                    <div class="favorite__info">
+                                        <p class="favorite__desc">Комплекс для выпрямления волос c экстрактом хны</p>
+                                        <h3 class="favorite__title">R&B Henna Spa Therapy Magic Straight Cream</h3>
+                                        <div class="favorite__bottom">
+                                            <div class="favorite__buttons">
+                                                <button>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M2 8.39995C1.99975 6.95029 2.58239 5.5614 3.61681 4.54578C4.65124 3.53016 6.05058 2.97311 7.5 2.99995C9.21732 2.99083 10.856 3.71913 12 4.99995C13.144 3.71913 14.7827 2.99083 16.5 2.99995C17.9494 2.97311 19.3488 3.53016 20.3832 4.54578C21.4176 5.5614 22.0002 6.95029 22 8.39995C22 13.7559 15.621 17.7999 12 20.9999C8.387 17.7729 2 13.7599 2 8.39995Z" fill="black"/>
+                                                    </svg>
+                                                </button>
+                                                <button>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M21.9209 22.9975L20.4604 6.73362C20.4206 6.28947 20.0483 5.94926 19.6025 5.94926H16.5908V4.59096C16.5908 2.05951 14.5314 0 12.0001 0C9.46884 0 7.40968 2.05951 7.40968 4.59096V5.94926H4.39594C3.95006 5.94926 3.57781 6.28947 3.53796 6.73362L2.0718 23.0615C2.05021 23.3025 2.13084 23.5413 2.29405 23.7197C2.45726 23.8982 2.68801 23.9999 2.92979 23.9999H21.0687C21.0694 23.9999 21.0703 23.9999 21.071 23.9999C21.5469 23.9999 21.9325 23.6142 21.9325 23.1385C21.9323 23.0906 21.9284 23.0434 21.9209 22.9975ZM9.13254 4.59096C9.13254 3.00949 10.4189 1.72286 12.0002 1.72286C13.5815 1.72286 14.8681 3.00949 14.8681 4.59096V5.94926H9.13254V4.59096ZM3.87208 22.2771L5.18352 7.67212H7.40968V9.21259C7.40968 9.68832 7.79526 10.074 8.27111 10.074C8.74696 10.074 9.13254 9.68832 9.13254 9.21259V7.67212H14.8681V9.21259C14.8681 9.68832 15.2536 10.074 15.7295 10.074C16.2053 10.074 16.5909 9.68832 16.5909 9.21259V7.67212H18.815L20.1264 22.2771H3.87208Z" fill="black"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="favorite__prices">
+                                                <span class="low">2300 руб</span>
+                                                <span>1300 руб</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="favorite__item">
+                                    <div class="favorite__img">
+                                        <img src="assets/images/favorite3.png" alt="">
+                                    </div>
+                                    <div class="favorite__info">
+                                        <p class="favorite__desc">Комплекс для выпрямления волос c экстрактом хны</p>
+                                        <h3 class="favorite__title">R&B Henna Spa Therapy Magic Straight Cream</h3>
+                                        <div class="favorite__bottom">
+                                            <div class="favorite__buttons">
+                                                <button>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M2 8.39995C1.99975 6.95029 2.58239 5.5614 3.61681 4.54578C4.65124 3.53016 6.05058 2.97311 7.5 2.99995C9.21732 2.99083 10.856 3.71913 12 4.99995C13.144 3.71913 14.7827 2.99083 16.5 2.99995C17.9494 2.97311 19.3488 3.53016 20.3832 4.54578C21.4176 5.5614 22.0002 6.95029 22 8.39995C22 13.7559 15.621 17.7999 12 20.9999C8.387 17.7729 2 13.7599 2 8.39995Z" fill="black"/>
+                                                    </svg>
+                                                </button>
+                                                <button>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M21.9209 22.9975L20.4604 6.73362C20.4206 6.28947 20.0483 5.94926 19.6025 5.94926H16.5908V4.59096C16.5908 2.05951 14.5314 0 12.0001 0C9.46884 0 7.40968 2.05951 7.40968 4.59096V5.94926H4.39594C3.95006 5.94926 3.57781 6.28947 3.53796 6.73362L2.0718 23.0615C2.05021 23.3025 2.13084 23.5413 2.29405 23.7197C2.45726 23.8982 2.68801 23.9999 2.92979 23.9999H21.0687C21.0694 23.9999 21.0703 23.9999 21.071 23.9999C21.5469 23.9999 21.9325 23.6142 21.9325 23.1385C21.9323 23.0906 21.9284 23.0434 21.9209 22.9975ZM9.13254 4.59096C9.13254 3.00949 10.4189 1.72286 12.0002 1.72286C13.5815 1.72286 14.8681 3.00949 14.8681 4.59096V5.94926H9.13254V4.59096ZM3.87208 22.2771L5.18352 7.67212H7.40968V9.21259C7.40968 9.68832 7.79526 10.074 8.27111 10.074C8.74696 10.074 9.13254 9.68832 9.13254 9.21259V7.67212H14.8681V9.21259C14.8681 9.68832 15.2536 10.074 15.7295 10.074C16.2053 10.074 16.5909 9.68832 16.5909 9.21259V7.67212H18.815L20.1264 22.2771H3.87208Z" fill="black"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="favorite__prices">
+                                                <span class="low">2300 руб</span>
+                                                <span>1300 руб</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
                     </main>
                 </div>
             </div>

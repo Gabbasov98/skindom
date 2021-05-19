@@ -136,7 +136,13 @@ $(document).ready(function() {
             $(value).removeClass("tabs__content--active")
             $(`.tabs__content[data-tabs-target=${ path }]`).addClass("tabs__content--active")
         })
+    }
 
+    let favoriteItems = $(".favorite__items");
+    if (favoriteItems.length > 0) {
+        $(".favorite__empty").hide();
 
+    } else {
+        $(".favorite__empty").show();
     }
 });
