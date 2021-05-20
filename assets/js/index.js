@@ -8,12 +8,24 @@ function sliderNew() {
             prevEl: '.new .swiper-button-prev',
         },
         breakpoints: {
-            // 320: {
-            //     slidesPerView: 1,
-            //     spaceBetween: 120
-            // },
-            768: {},
-            1200: {},
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 5,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+            },
+
+
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+            },
+            1400: {
+                slidesPerView: 4,
+                spaceBetween: 50,
+            },
         }
     })
 }
@@ -28,12 +40,22 @@ function sliderRecomend() {
             prevEl: '.recomend .swiper-button-prev',
         },
         breakpoints: {
-            // 320: {
-            //     slidesPerView: 1,
-            //     spaceBetween: 120
-            // },
-            768: {},
-            1200: {},
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 5,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 15
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+            },
+            1400: {
+                slidesPerView: 4,
+                spaceBetween: 50,
+            },
         }
     })
 }
@@ -50,12 +72,15 @@ function sliderSale() {
             prevEl: '.sale .swiper-button-prev',
         },
         breakpoints: {
-            // 320: {
-            //     slidesPerView: 1,
-            //     spaceBetween: 120
-            // },
-            768: {},
-            1200: {},
+            320: {
+                spaceBetween: 40,
+            },
+            768: {
+                spaceBetween: 80,
+            },
+            992: {
+                spaceBetween: 140,
+            },
         }
     })
 }
@@ -70,12 +95,24 @@ function sliderInterest() {
             prevEl: '.interest .swiper-button-prev',
         },
         breakpoints: {
-            // 320: {
-            //     slidesPerView: 1,
-            //     spaceBetween: 120
-            // },
-            768: {},
-            1200: {},
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 5,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+            },
+
+
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+            },
+            1400: {
+                slidesPerView: 4,
+                spaceBetween: 50,
+            },
         }
     })
 }
@@ -90,12 +127,24 @@ function sliderSame() {
             prevEl: '.same .swiper-button-prev',
         },
         breakpoints: {
-            // 320: {
-            //     slidesPerView: 1,
-            //     spaceBetween: 120
-            // },
-            768: {},
-            1200: {},
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 5,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+            },
+
+
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+            },
+            1400: {
+                slidesPerView: 4,
+                spaceBetween: 50,
+            },
         }
     })
 }
@@ -185,14 +234,64 @@ $(document).ready(function() {
         $(".city").hide(200)
     })
 
+    // Корзины
     $(".header__btn.cart-btn").click(function() {
         $(".modal-bg").show();
         $(".cart").show(200)
     })
 
     $(".cart__close").click(function() {
+            $(".modal-bg").hide();
+            $(".cart").hide(200)
+        })
+        // Формы заказа
+    $(".cart-buy-btn").click(function() {
+        $(".order").show(200);
         $(".modal-bg").hide();
         $(".cart").hide(200)
+    })
+    $(".order__close").click(function() {
+        // $(".modal-bg").hide();
+        $(".order").hide(200)
+    })
+    $(".change-city").click(function() {
+        $(".modal-bg").show();
+        $(".city").show(200)
+    })
+
+    // Смена адреса
+    $(".change-address").click(function() {
+        $(".modal-bg").show();
+        $(".address").show(200)
+    })
+    $(".address__close").click(function() {
+        $(".modal-bg").hide();
+        $(".address").hide(200)
+    })
+
+    // Бургер меню
+    $(".header__burger").click(function() {
+        $(this).toggleClass("header__burger--active");
+        $(".nav").slideToggle();
+        $(".catalog-menu").hide();
+    })
+    $(".catalog-open").click(function() {
+        $(".catalog-menu").show(400);
+
+    })
+    $(".catalog-menu__back").click(function() {
+        $(".catalog-menu").hide(400);
+        $(".catalog-submenu").hide(400);
+    })
+    $(".catalog-menu__item").click(function() {
+        $(".catalog-submenu").hide();
+        $(this).children(".catalog-submenu").show(400);
+    })
+
+    // Шаги оформления заказа
+    $(".step__show").click(function() {
+        $(this).siblings(".step__hidden").slideToggle()
+        $(this).children(".step__show-top").children(".step__btn").toggleClass("step__btn--active");
     })
 
 
@@ -213,6 +312,10 @@ $(document).ready(function() {
     $("#reg-tel").click(function() {
         $("#reg-tel").setCursorPosition(3)
     }).mask("+7 (999) 999-99-99")
+    $(".tel-input").click(function() {
+        $(".tel-input").setCursorPosition(3)
+    }).mask("+7 (999) 999-99-99")
+
 
 
 
@@ -220,6 +323,12 @@ $(document).ready(function() {
     $(".step__item-radio").click(function() {
         $(this).siblings(".step__item-radio").removeClass("step__item-radio--active")
         $(this).addClass("step__item-radio--active")
+    })
+
+    // Выбор способов оплаты
+    $(".step__item-pay-method").click(function() {
+        $(this).siblings(".step__item-pay-method").removeClass("step__item-pay-method--active")
+        $(this).addClass("step__item-pay-method--active")
     })
 
     $('.step__time').each(function() {
@@ -278,59 +387,5 @@ $(document).ready(function() {
     });
 
 
-    // Выбор флагов
-    $('.flag__select').each(function() {
-        const _this = $(this),
-            selectOption = _this.find('option'),
-            selectOptionLength = selectOption.length,
-            selectedOption = selectOption.filter(':selected'),
-            duration = 450; // длительность анимации 
 
-        _this.hide();
-        _this.wrap('<div class="flag__select"></div>');
-        $('<div>', {
-            class: 'new-select',
-            text: _this.children('option:disabled').text()
-        }).insertAfter(_this);
-
-        const selectHead = _this.next('.new-select');
-        $('<div>', {
-            class: 'new-select__list'
-        }).insertAfter(selectHead);
-
-        const selectList = selectHead.next('.new-select__list');
-        for (let i = 1; i < selectOptionLength; i++) {
-            $('<div>', {
-                    class: 'new-select__item',
-                    html: $('<span>', {
-                        text: selectOption.eq(i).text()
-                    })
-                })
-                .attr('data-value', selectOption.eq(i).val())
-                .appendTo(selectList);
-        }
-
-        const selectItem = selectList.find('.new-select__item');
-        selectList.slideUp(0);
-        selectHead.on('click', function() {
-            if (!$(this).hasClass('on')) {
-                $(this).addClass('on');
-                selectList.slideDown(duration);
-
-                selectItem.on('click', function() {
-                    let chooseItem = $(this).data('value');
-
-                    $('select').val(chooseItem).attr('selected', 'selected');
-                    selectHead.text($(this).find('span').text());
-
-                    selectList.slideUp(duration);
-                    selectHead.removeClass('on');
-                });
-
-            } else {
-                $(this).removeClass('on');
-                selectList.slideUp(duration);
-            }
-        });
-    });
 });

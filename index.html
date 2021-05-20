@@ -35,19 +35,32 @@
             <div class="header__bottom">
                 <div class="container">
                     <div class="header__bottom-inner">
+                        <div class="header__burger ">
+                            <span></span>
+                        </div>
                         <div class="header__bottom-left">
-                            <a href="#" class="header__logo">
+                            <a href="index.html" class="header__logo">
                                 <img src="assets/images/logo.png" alt="">
                             </a>
+
                             <nav class="nav">
                                 <ul>
                                     <li class="nav__item nav__item-catalog nav__item--active">
 
-                                        <p class="catalog-open">Каталог</p>
+                                        <p class="catalog-open">
+                                            <span>Каталог</span>
+                                            <button>
+                                                <img src="assets/images/arrow-menu.png" alt="">
+                                            </button>
+                                        </p>
                                         <div class="catalog-menu">
                                             <div class="container">
                                                 <div class="catalog-menu__inner">
                                                     <div class="catalog-menu__left">
+                                                        <div class="catalog-menu__back">
+                                                            <img src="assets/images/arrow-menu-back.png" alt="">
+                                                            <span>Назад</span>
+                                                        </div>
                                                         <ul class="catalog-menu__main">
                                                             <li class="catalog-menu__item"><span>Все товары</span>
                                                                 <button>
@@ -101,7 +114,7 @@
                                                                 <div class="catalog-submenu">
                                                                     <ul class="catalog-submenu__list">
                                                                         <li class="catalog-submenu__item">
-                                                                            <a href="">Кремовые маски</a>
+                                                                            <a href="">Кремовые маски2</a>
                                                                         </li>
                                                                         <li class="catalog-submenu__item">
                                                                             <a href="">Тканевые маски</a>
@@ -115,6 +128,27 @@
                                                                         <li class="catalog-submenu__item">
                                                                             <a href="">Гипсовые маски</a>
                                                                         </li>
+                                                                    </ul>
+                                                                    <div class="catalog-product">
+                                                                        <div class="catalog-product__item">
+                                                                            <div class="catalog-product__top">
+                                                                                <img src="assets/images/menu1.jpg" alt="">
+                                                                            </div>
+                                                                            <div class="catalog-product__bottom">
+                                                                                <h3 class="catalog-product__title">11Collagen Gypsum Pack</h3>
+                                                                                <p class="catalog-product__desc">Гипсовая маска для лица коллагеновая</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="catalog-product__item">
+                                                                            <div class="catalog-product__top">
+                                                                                <img src="assets/images/menu2.jpg" alt="">
+                                                                            </div>
+                                                                            <div class="catalog-product__bottom">
+                                                                                <h3 class="catalog-product__title">11Hyaluronic Acid Essential Silk Mask</h3>
+                                                                                <p class="catalog-product__desc">Гипсовая маска для лица коллагеновая</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </li>
                                                             <li class="catalog-menu__item"><span>Пилинги и скрабы</span>
@@ -689,20 +723,31 @@
                                                                     </div>
                                                                 </div>
                                                             </li>
-                                                            </ul>
+                                                        </ul>
                                                     </div>
 
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="nav__item">Клуб косметологов</li>
-                                    <li class="nav__item">Сертификаты</li>
-                                    <li class="nav__item">Доставка и Оплата</li>
-                                    <li class="nav__item">Контакты</li>
-                                    <li class="nav__item">Блог</li>
-                                    </ul>
+                                    <li class="nav__item"><a href="club.html">Клуб косметологов</a></li>
+                                    <li class="nav__item"><a href="#">Сертификаты</a></li>
+                                    <li class="nav__item"><a href="delivery.html">Доставка и Оплата</a></li>
+                                    <li class="nav__item"><a href="contacts.html">Контакты</a></li>
+                                    <li class="nav__item"><a href="blog.html">Блог</a></li>
+                                    <li>
+                                        <div class="header__city header__city--mob">
+                                            <span>Санкт-Петербург</span>
+                                            <button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.99984 10.4753L12.0065 6.46866L11.0645 5.52533L7.99984 8.592L4.93583 5.52533L3.99316 6.468L7.99984 10.4753Z" fill="#F7B0C3"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+                                </ul>
                             </nav>
+
                         </div>
                         <div class="header__bottom-right">
                             <button class="header__btn">
@@ -732,6 +777,7 @@
                                 </svg>
                                 <span>12</span>    
                             </button>
+
                         </div>
                     </div>
                 </div>
@@ -742,7 +788,7 @@
             <div class="container">
                 <div class="header__content-inner">
                     <h1 class="header__title">SKINDOM</h1>
-                    <p class="header__desc">Специальные цены только до 30 апреля</p>
+                    <p class="header__desc">Специальные цены только <br> до 30 апреля</p>
                     <button class="header__content-btn">Перейти в каталог</button>
                 </div>
             </div>
@@ -1434,7 +1480,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="cart__btn">Оформить заказ</button>
+                <button class="cart__btn cart-buy-btn">Оформить заказ</button>
 
             </div>
 
@@ -1466,257 +1512,248 @@
         </div>
 
         <div class="order">
-            <div class="order__inner">
-                <div class="order__top">
-                    <button class="order__back">
-                        <img src="assets/images/long_left.png" alt="">
-                    </button>
-                    <a class="order__logo" href="">
-                        <img src="assets/images/logo.png" alt="">
-                    </a>
-                    <button class="order__close">
-                        <img src="assets/images/close.svg" alt="">
-                    </button>
-                </div>
-                <div class="order__sides">
-                    <div class="order__side-left">
-                        <div class="order__steps">
-                            <div class="order__step step step--active">
-                                <div class="step__show">
-                                    <div class="step__show-top">
-                                        <span class="step__num">1 / 3</span>
-                                        <span class="step__title step__title--active">Адрес и доставка</span>
-                                        <button class="step__btn"><img src="assets/images/order_down.svg" alt=""></button>
-                                    </div>
-                                    <p class="step__hint">Выбрать способ доставки</p>
-                                </div>
-                                <div class="step__hidden ">
-                                    <div class="step__item">
-                                        <div class="step__item-left">Населенный <br> пункт</div>
-                                        <div class="step__item-right">
-                                            <p>г. Красноярск <br> Красноярский край</p>
-                                            <button class="step__item-btn">Изменить город</button>
+            <div class="container">
+                <div class="order__inner">
+                    <div class="order__top">
+                        <button class="order__back">
+                            <img src="assets/images/long_left.png" alt="">
+                        </button>
+                        <a class="order__logo" href="">
+                            <img src="assets/images/logo.png" alt="">
+                        </a>
+                        <button class="order__close">
+                            <img src="assets/images/close.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="order__sides">
+                        <div class="order__side-left">
+                            <div class="order__steps">
+                                <div class="order__step step step--active">
+                                    <div class="step__show">
+                                        <div class="step__show-top">
+                                            <span class="step__num">1 / 3</span>
+                                            <span class="step__title step__title--active">Адрес и доставка</span>
+                                            <button class="step__btn"><img src="assets/images/order_down.svg" alt=""></button>
                                         </div>
+                                        <p class="step__hint">Выбрать способ доставки</p>
                                     </div>
-                                    <div class="step__item">
-                                        <div class="step__item-left">Способ <br> доставки
+                                    <div class="step__hidden ">
+                                        <div class="step__item">
+                                            <div class="step__item-left">Населенный <br> пункт</div>
+                                            <div class="step__item-right">
+                                                <p>г. Красноярск <br> Красноярский край</p>
+                                                <button class="step__item-btn change-city">Изменить город</button>
+                                            </div>
                                         </div>
-                                        <div class="step__item-right">
-                                            <div class="step__item-radios">
-                                                <div class="step__item-radio step__item-radio--active">
-                                                    <p>Курьер</p>
-                                                    <p>Служба доставки</p>
-                                                    <p>Бесплатно</p>
-                                                </div>
-                                                <div class="step__item-radio ">
-                                                    <p>Самовывоз</p>
-                                                    <p>Пункты выдачи</p>
-                                                    <p>Бесплатно</p>
+                                        <div class="step__item">
+                                            <div class="step__item-left">Способ <br> доставки
+                                            </div>
+                                            <div class="step__item-right">
+                                                <div class="step__item-radios">
+                                                    <div class="step__item-radio step__item-radio--active">
+                                                        <p>Курьер</p>
+                                                        <p>Служба доставки</p>
+                                                        <p>Бесплатно</p>
+                                                    </div>
+                                                    <div class="step__item-radio ">
+                                                        <p>Самовывоз</p>
+                                                        <p>Пункты выдачи</p>
+                                                        <p>Бесплатно</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="step__item">
-                                        <div class="step__item-left">Адрес</div>
-                                        <div class="step__item-right">
-                                            <p>г. Красноярск, ул. Республики, д. 33А, кв. 64</p>
-                                            <button class="step__item-btn">Изменить адрес</button>
-                                        </div>
-                                    </div>
-                                    <div class="step__item">
-                                        <div class="step__item-left">Дата и время
-                                        </div>
-                                        <div class="step__item-right">
-                                            <div class="step__item-radios">
-                                                <div class="step__item-radio sm step__item-radio--active">
-                                                    <p>Пн</p>
-                                                    <p>19.04</p>
-                                                </div>
-                                                <div class="step__item-radio sm ">
-                                                    <p>Вт</p>
-                                                    <p>20.04</p>
-                                                </div>
-                                                <div class="step__item-radio sm ">
-                                                    <p>Ср</p>
-                                                    <p>21.04</p>
-                                                </div>
-                                                <div class="step__item-radio sm ">
-                                                    <p>Чт</p>
-                                                    <p>22.04</p>
-                                                </div>
-                                                <div class="step__item-radio sm ">
-                                                    <p>Пт</p>
-                                                    <p>23.04</p>
-                                                </div>
+                                        <div class="step__item">
+                                            <div class="step__item-left">Адрес</div>
+                                            <div class="step__item-right">
+                                                <p>г. Красноярск, ул. Республики, д. 33А, кв. 64</p>
+                                                <button class="step__item-btn change-address">Изменить адрес</button>
                                             </div>
-                                            <p class="step__sms">Как только ваш заказ будет передан курьеру, <br> вы получите SMS-сообщение.</p>
-                                            <select name="" id="" class="step__time">
-                                                <!-- <option disabled>Выбрать</option> -->
-                                                <option disabled value="10:00 - 18:00">10:00 - 18:00</option>
-                                                <option value="13:00 - 16:00">13:00 - 16:00</option>
-                                                <option value="09:00 - 12:00">09:00 - 12:00</option>
-                                            </select>
-
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="order__step step">
-                                <div class="step__show">
-                                    <div class="step__show-top">
-                                        <span class="step__num">2 / 3</span>
-                                        <span class="step__title">Получатель</span>
-                                        <button class="step__btn"><img src="assets/images/order_down.svg" alt=""></button>
-                                    </div>
-                                </div>
-                                <div class="step__hidden ">
-                                    <div class="step__item">
-                                        <div class="step__item-left">Ваши данные</div>
-                                        <div class="step__item-right">
-                                            <p class="step__input-container">
-                                                <input type="text" placeholder="Фамилия">
-                                                <span class="input__error">введите свою фамилию</span>
-                                            </p>
-                                            <p class="step__input-container">
-                                                <input type="text" placeholder="Имя">
-                                                <span class="input__error">введите своё имя</span>
-                                            </p>
-                                            <p class="step__input-container">
-                                                <input class="fname" type="text" placeholder="Отчество">
-                                                <span class="input__error">введите своё отчество</span>
-                                                <span class="input__hint">обязательно, при доставке почтой</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="step__item">
-                                        <div class="step__item-left">Контакты
-                                        </div>
-                                        <div class="step__item-right">
-                                            <div class="step__input-container">
-                                                <input type="tel">
-                                                <span class="input__error">введите свой телефон</span>
-                                                <select name="" id="" class="step__flags flag__select">
-                                                    <option disabled value="russia"></option>
-                                                    <option value="belarus">сь</option>
+                                        <div class="step__item">
+                                            <div class="step__item-left">Дата и время
+                                            </div>
+                                            <div class="step__item-right">
+                                                <div class="step__item-radios">
+                                                    <div class="step__item-radio sm step__item-radio--active">
+                                                        <p>Пн</p>
+                                                        <p>19.04</p>
+                                                    </div>
+                                                    <div class="step__item-radio sm ">
+                                                        <p>Вт</p>
+                                                        <p>20.04</p>
+                                                    </div>
+                                                    <div class="step__item-radio sm ">
+                                                        <p>Ср</p>
+                                                        <p>21.04</p>
+                                                    </div>
+                                                    <div class="step__item-radio sm ">
+                                                        <p>Чт</p>
+                                                        <p>22.04</p>
+                                                    </div>
+                                                    <div class="step__item-radio sm ">
+                                                        <p>Пт</p>
+                                                        <p>23.04</p>
+                                                    </div>
+                                                </div>
+                                                <p class="step__sms">Как только ваш заказ будет передан курьеру, <br> вы получите SMS-сообщение.</p>
+                                                <select name="" id="" class="step__time">
+                                                    <!-- <option disabled>Выбрать</option> -->
+                                                    <option disabled value="10:00 - 18:00">10:00 - 18:00</option>
+                                                    <option value="13:00 - 16:00">13:00 - 16:00</option>
+                                                    <option value="09:00 - 12:00">09:00 - 12:00</option>
                                                 </select>
-                                            </div>
-                                            <div class="step__input-container">
-                                                <input type="text" placeholder="Ваша почта">
-                                                <span class="input__error">введите свою почту</span>
-                                                <span class="input__hint">Необходимо для отправки чека</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="step__item">
-                                        <div class="step__item-left">Адрес</div>
-                                        <div class="step__item-right">
-                                            <p>г. Красноярск, ул. Республики, д. 33А, кв. 64</p>
-                                            <button class="step__item-btn">Изменить адрес</button>
-                                        </div>
-                                    </div>
-                                    <div class="step__item">
-                                        <div class="step__item-left">Дата и время
-                                        </div>
-                                        <div class="step__item-right">
-                                            <div class="step__item-radios">
-                                                <div class="step__item-radio sm step__item-radio--active">
-                                                    <p>Пн</p>
-                                                    <p>19.04</p>
-                                                </div>
-                                                <div class="step__item-radio sm ">
-                                                    <p>Вт</p>
-                                                    <p>20.04</p>
-                                                </div>
-                                                <div class="step__item-radio sm ">
-                                                    <p>Ср</p>
-                                                    <p>21.04</p>
-                                                </div>
-                                                <div class="step__item-radio sm ">
-                                                    <p>Чт</p>
-                                                    <p>22.04</p>
-                                                </div>
-                                                <div class="step__item-radio sm ">
-                                                    <p>Пт</p>
-                                                    <p>23.04</p>
-                                                </div>
-                                            </div>
-                                            <p class="step__sms">Как только ваш заказ будет передан курьеру, <br> вы получите SMS-сообщение.</p>
-                                            <select name="" id="" class="step__time">
-                                                <!-- <option disabled>Выбрать</option> -->
-                                                <option disabled value="10:00 - 18:00">10:00 - 18:00</option>
-                                                <option value="13:00 - 16:00">13:00 - 16:00</option>
-                                                <option value="09:00 - 12:00">09:00 - 12:00</option>
-                                            </select>
 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="order__step step">
-                                <div class="step__show">
-                                    <div class="step__show-top">
-                                        <span class="step__num">3 / 3</span>
-                                        <span class="step__title">Оплата</span>
-                                        <button class="step__btn"><img src="assets/images/order_down.svg" alt=""></button>
+                                <div class="order__step step">
+                                    <div class="step__show">
+                                        <div class="step__show-top">
+                                            <span class="step__num">2 / 3</span>
+                                            <span class="step__title">Получатель</span>
+                                            <button class="step__btn"><img src="assets/images/order_down.svg" alt=""></button>
+                                        </div>
+                                    </div>
+                                    <div class="step__hidden ">
+                                        <div class="step__item">
+                                            <div class="step__item-left">Ваши данные</div>
+                                            <div class="step__item-right">
+                                                <p class="step__input-container">
+                                                    <input type="text" placeholder="Фамилия">
+                                                    <span class="input__error">введите свою фамилию</span>
+                                                </p>
+                                                <p class="step__input-container">
+                                                    <input type="text" placeholder="Имя">
+                                                    <span class="input__error">введите своё имя</span>
+                                                </p>
+                                                <p class="step__input-container">
+                                                    <input class="fname" type="text" placeholder="Отчество">
+                                                    <span class="input__error">введите своё отчество</span>
+                                                    <span class="input__hint">обязательно, при доставке почтой</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="step__item">
+                                            <div class="step__item-left">Контакты
+                                            </div>
+                                            <div class="step__item-right">
+                                                <div class="step__input-container">
+                                                    <input type="tel" class="tel-input" placeholder="+ 7 (___) ___-__-__">
+                                                    <span class="input__error">введите свой телефон</span>
+
+                                                </div>
+                                                <div class="step__input-container">
+                                                    <input type="text" placeholder="Ваша почта">
+                                                    <span class="input__error">введите свою почту</span>
+                                                    <span class="input__hint">Необходимо для отправки чека</span>
+                                                </div>
+                                                <div class="step__input-container step__input--agree">
+                                                    <input type='checkbox' class='checkbox' id='order-agree'>
+                                                    <label for='order-agree'>Я даю согласие на обработку своих персональных данных в соответсвии с <a href="#">Политикой в отношении обработки персональных данных</a> и <a href="#">Пользовательским соглашением.</a></label>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
+                                <div class="order__step step">
+                                    <div class="step__show">
+                                        <div class="step__show-top">
+                                            <span class="step__num">3 / 3</span>
+                                            <span class="step__title">Оплата</span>
+                                            <button class="step__btn"><img src="assets/images/order_down.svg" alt=""></button>
+                                        </div>
+                                    </div>
+                                    <div class="step__hidden">
+                                        <div class="step__item step__item--fend">
+                                            <div class="step__item-right ">
+                                                <p class="step__item-pay">бесконтактная доставка действует для всех заказов, оплаченных онлайн</p>
+                                                <div class="step__item-pay-methods">
+                                                    <div class="step__item-pay-method step__item-pay-method--active"><img src="assets/images/credit-card.svg" alt=""></div>
+                                                    <div class="step__item-pay-method"><img src="assets/images/googlePay.svg" alt=""></div>
+                                                    <div class="step__item-pay-method">при <br> получении</div>
+                                                </div>
+                                                <p class="step__item-pay-desc">Оплата курьеру банковской картой или наличными.</p>
+                                                <p class="step__item-pay-desc">Обратите внимание! Подарочные сертификаты и бонусы к оплате не принимаются.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="order__btn">Оформить заказ</button>
                             </div>
-                            <button class="order__btn">Оформить заказ</button>
+
+
                         </div>
-
-
-                    </div>
-                    <div class="order__side-right">
-                        <div class="buy">
-                            <div class="buy__top">
-                                <h3 class="buy__title">
-                                    Ваш заказ /
-                                    <span>1</span>
-                                    <span> шт.</span>
-                                </h3>
-                                <button class="buy__change">Изменить</button>
-                            </div>
-                            <div class="buy__img">
-                                <img src="assets/images/buy.jpg" alt="">
-                            </div>
-                            <div class="bonus">
-                                <div class="bonus__top">
-                                    <span>Доступно бонусов </span>
-                                    <span class="bonus__val">1567</span>
+                        <div class="order__side-right">
+                            <div class="buy">
+                                <div class="buy__top">
+                                    <h3 class="buy__title">
+                                        Ваш заказ /
+                                        <span>1</span>
+                                        <span> шт.</span>
+                                    </h3>
+                                    <button class="buy__change">Изменить</button>
                                 </div>
-                                <form action="">
+                                <div class="buy__img">
+                                    <img src="assets/images/buy.jpg" alt="">
+                                </div>
+                                <div class="bonus">
+                                    <div class="bonus__top">
+                                        <span>Доступно бонусов </span>
+                                        <span class="bonus__val">1567</span>
+                                    </div>
+                                    <form action="">
+                                        <p>
+                                            <input type="text" placeholder="Введите сумму">
+                                            <span>
+                                                <img src="assets/images/bonus-icon.svg" alt="">
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <input type="text" placeholder="Введите промокод">
+                                            <span>
+                                                <img src="assets/images/bonus-icon.svg" alt="">
+                                            </span>
+                                        </p>
+                                    </form>
+                                </div>
+                                <div class="buy__bottom">
                                     <p>
-                                        <input type="text" placeholder="Введите сумму">
-                                        <span>
-                                            <img src="assets/images/bonus-icon.svg" alt="">
-                                        </span>
+                                        <span class="buy__bottom-title">Сумма заказа</span>
+                                        <span class="buy__bottom-value">2600 руб</span>
                                     </p>
                                     <p>
-                                        <input type="text" placeholder="Введите промокод">
-                                        <span>
-                                            <img src="assets/images/bonus-icon.svg" alt="">
-                                        </span>
+                                        <span class="buy__bottom-title">Доставка</span>
+                                        <span class="buy__bottom-value">Не выбрано</span>
                                     </p>
-                                </form>
-                            </div>
-                            <div class="buy__bottom">
-                                <p>
-                                    <span class="buy__bottom-title">Сумма заказа</span>
-                                    <span class="buy__bottom-value">2600 руб</span>
-                                </p>
-                                <p>
-                                    <span class="buy__bottom-title">Доставка</span>
-                                    <span class="buy__bottom-value">Не выбрано</span>
-                                </p>
-                            </div>
-                            <div class="buy__total">
-                                <p>Итого</p>
-                                <p>2600 руб</p>
+                                </div>
+                                <div class="buy__total">
+                                    <p>Итого</p>
+                                    <p>2600 руб</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
+        </div>
+
+        <div class="address">
+            <button class="address__close"><img src="assets/images/close.svg" alt=""></button>
+            <h2 class="address__title">новый адрес</h2>
+            <p class="address__city">г. Красноярск <br>Красноярский край </p>
+            <form action="">
+                <p class="address__input-container">
+                    <input type="text" placeholder="Улица и дом">
+                </p>
+                <p class="address__input-container">
+                    <input type="text" placeholder="Квартира">
+                </p>
+                <button class="address__btn">Применить</button>
+            </form>
         </div>
 
     </div>
