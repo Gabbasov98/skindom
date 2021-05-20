@@ -145,4 +145,192 @@ $(document).ready(function() {
     } else {
         $(".favorite__empty").show();
     }
+
+    $(".country__show").click(function() {
+        $(".country__hidden").slideToggle();
+        $(".country__open-btn").toggleClass("country__open-btn--active")
+    })
+
+
+    // Выпадающий список стран
+    const selectContent = $(".country__select .select__content");
+    const selected = $(".country__select .selected");
+
+    $(".select__content").click(function(e) {
+        let tabsPath = e.target.dataset.tabsPath;
+
+        selectHandler(tabsPath)
+    })
+
+    function selectHandler(path) {
+        console.log(path)
+        $(".selected").removeClass("selected--active")
+        $(`.selected[data-tabs-target=${ path }]`).addClass("selected--active")
+        $(".country__hidden").hide();
+        $(".country__open-btn").removeClass("country__open-btn--active")
+    }
+
+    // Выбор города
+    $(".header__city").click(function() {
+        $(".modal-bg").show();
+        $(".city").show(200)
+    })
+    $(".modal-bg").click(function() {
+        $(".modal-bg").hide();
+        $(".city").hide(200)
+        $(".cart").hide(200)
+    })
+    $(".city__close").click(function() {
+        $(".modal-bg").hide();
+        $(".city").hide(200)
+    })
+
+    $(".header__btn.cart-btn").click(function() {
+        $(".modal-bg").show();
+        $(".cart").show(200)
+    })
+
+    $(".cart__close").click(function() {
+        $(".modal-bg").hide();
+        $(".cart").hide(200)
+    })
+
+
+    $.fn.setCursorPosition = function(pos) {
+        this.each(function(index, elem) {
+            if (elem.setSelectionRange) {
+                elem.setSelectionRange(pos, pos);
+            } else if (elem.createTextRange) {
+                var range = elem.createTextRange();
+                range.collapse(true);
+                range.moveEnd('character', pos);
+                range.moveStart('character', pos);
+                range.select();
+            }
+        });
+        return this;
+    };
+    $("#reg-tel").click(function() {
+        $("#reg-tel").setCursorPosition(3)
+    }).mask("+7 (999) 999-99-99")
+
+
+
+    // выбор самовызов - курьер
+    $(".step__item-radio").click(function() {
+        $(this).siblings(".step__item-radio").removeClass("step__item-radio--active")
+        $(this).addClass("step__item-radio--active")
+    })
+
+    $('.step__time').each(function() {
+        const _this = $(this),
+            selectOption = _this.find('option'),
+            selectOptionLength = selectOption.length,
+            selectedOption = selectOption.filter(':selected'),
+            duration = 450; // длительность анимации 
+
+        _this.hide();
+        _this.wrap('<div class="step__time"></div>');
+        $('<div>', {
+            class: 'new-select',
+            text: _this.children('option:disabled').text()
+        }).insertAfter(_this);
+
+        const selectHead = _this.next('.new-select');
+        $('<div>', {
+            class: 'new-select__list'
+        }).insertAfter(selectHead);
+
+        const selectList = selectHead.next('.new-select__list');
+        for (let i = 1; i < selectOptionLength; i++) {
+            $('<div>', {
+                    class: 'new-select__item',
+                    html: $('<span>', {
+                        text: selectOption.eq(i).text()
+                    })
+                })
+                .attr('data-value', selectOption.eq(i).val())
+                .appendTo(selectList);
+        }
+
+        const selectItem = selectList.find('.new-select__item');
+        selectList.slideUp(0);
+        selectHead.on('click', function() {
+            if (!$(this).hasClass('on')) {
+                $(this).addClass('on');
+                selectList.slideDown(duration);
+
+                selectItem.on('click', function() {
+                    let chooseItem = $(this).data('value');
+
+                    $('select').val(chooseItem).attr('selected', 'selected');
+                    selectHead.text($(this).find('span').text());
+
+                    selectList.slideUp(duration);
+                    selectHead.removeClass('on');
+                });
+
+            } else {
+                $(this).removeClass('on');
+                selectList.slideUp(duration);
+            }
+        });
+    });
+
+
+    // Выбор флагов
+    $('.flag__select').each(function() {
+        const _this = $(this),
+            selectOption = _this.find('option'),
+            selectOptionLength = selectOption.length,
+            selectedOption = selectOption.filter(':selected'),
+            duration = 450; // длительность анимации 
+
+        _this.hide();
+        _this.wrap('<div class="flag__select"></div>');
+        $('<div>', {
+            class: 'new-select',
+            text: _this.children('option:disabled').text()
+        }).insertAfter(_this);
+
+        const selectHead = _this.next('.new-select');
+        $('<div>', {
+            class: 'new-select__list'
+        }).insertAfter(selectHead);
+
+        const selectList = selectHead.next('.new-select__list');
+        for (let i = 1; i < selectOptionLength; i++) {
+            $('<div>', {
+                    class: 'new-select__item',
+                    html: $('<span>', {
+                        text: selectOption.eq(i).text()
+                    })
+                })
+                .attr('data-value', selectOption.eq(i).val())
+                .appendTo(selectList);
+        }
+
+        const selectItem = selectList.find('.new-select__item');
+        selectList.slideUp(0);
+        selectHead.on('click', function() {
+            if (!$(this).hasClass('on')) {
+                $(this).addClass('on');
+                selectList.slideDown(duration);
+
+                selectItem.on('click', function() {
+                    let chooseItem = $(this).data('value');
+
+                    $('select').val(chooseItem).attr('selected', 'selected');
+                    selectHead.text($(this).find('span').text());
+
+                    selectList.slideUp(duration);
+                    selectHead.removeClass('on');
+                });
+
+            } else {
+                $(this).removeClass('on');
+                selectList.slideUp(duration);
+            }
+        });
+    });
 });
