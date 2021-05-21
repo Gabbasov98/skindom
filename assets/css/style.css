@@ -166,6 +166,10 @@ li {
 }
 .header__logo {
   margin-right: 48px;
+  width: 124px;
+}
+.header__logo img {
+  width: 100%;
 }
 .header .nav ul {
   display: flex;
@@ -429,7 +433,7 @@ li {
   display: none;
   width: 861px;
   position: fixed;
-  height: 99vh;
+  height: 100vh;
   top: 0;
   right: 0;
   background-color: #fff;
@@ -612,7 +616,7 @@ li {
   display: none;
   width: 861px;
   position: fixed;
-  height: 99vh;
+  height: 100vh;
   top: 0;
   right: 0;
   background-color: #fff;
@@ -939,7 +943,7 @@ li {
   position: fixed;
   top: 0;
   left: 0;
-  height: 99.99vh;
+  height: 100%;
   overflow-y: scroll;
   background-color: #fff;
   padding-top: 30px;

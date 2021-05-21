@@ -140,6 +140,11 @@ li {
     }
     &__logo {
         margin-right: 48px;
+        width: 124px;
+        // height: 38px;
+        & img {
+            width: 100%;
+        }
     }
     .nav {
         & ul {
@@ -373,7 +378,7 @@ li {
     display: none;
     width: 861px;
     position: fixed;
-    height: 99vh;
+    height: 100vh;
     top: 0;
     right: 0;
     background-color: #fff;
@@ -547,7 +552,7 @@ li {
     display: none;
     width: 861px;
     position: fixed;
-    height: 99vh;
+    height: 100vh;
     top: 0;
     right: 0;
     background-color: #fff;
@@ -857,7 +862,7 @@ li {
     position: fixed;
     top: 0;
     left: 0;
-    height: 99.99vh;
+    height: 100%;
     overflow-y: scroll;
     background-color: #fff;
     padding-top: 30px;
