@@ -940,6 +940,9 @@ li {
         background-color: inherit;
         margin-left: auto;
         margin-right: 0;
+        & img {
+            transition: .6s;
+        }
     }
     &__btn--active img {
         transform: rotate(180deg);
@@ -3667,6 +3670,16 @@ li {
             font-size: 60px;
         }
     }
+    .address {
+        width: 100%;
+        padding-top: 80px;
+        &__title {
+            font-size: 45px;
+        }
+        & form input {
+            width: 100%;
+        }
+    }
     .cart {
         width: 100%;
         padding-left: 40px;
@@ -3956,7 +3969,7 @@ li {
         padding-top: 30px;
     }
     .city {
-        padding: 30px 20px;
+        padding: 40px 20px;
         font-size: 14px;
         &__close {
             top: 20px;
@@ -3967,6 +3980,17 @@ li {
         }
         &__title {
             font-size: 50px;
+        }
+    }
+    .address {
+        padding: 40px 20px;
+        font-size: 14px;
+        &__title {
+            font-size: 35px;
+        }
+        &__close {
+            top: 20px;
+            right: 20px;
         }
     }
     .cart {

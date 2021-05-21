@@ -1043,6 +1043,9 @@ li {
   margin-left: auto;
   margin-right: 0;
 }
+.step__btn img {
+  transition: .6s;
+}
 .step__btn--active img {
   transform: rotate(180deg);
 }
@@ -4020,6 +4023,17 @@ li {
     font-size: 60px;
   }
 
+  .address {
+    width: 100%;
+    padding-top: 80px;
+  }
+  .address__title {
+    font-size: 45px;
+  }
+  .address form input {
+    width: 100%;
+  }
+
   .cart {
     width: 100%;
     padding-left: 40px;
@@ -4323,7 +4337,7 @@ li {
   }
 
   .city {
-    padding: 30px 20px;
+    padding: 40px 20px;
     font-size: 14px;
   }
   .city__close {
@@ -4335,6 +4349,18 @@ li {
   }
   .city__title {
     font-size: 50px;
+  }
+
+  .address {
+    padding: 40px 20px;
+    font-size: 14px;
+  }
+  .address__title {
+    font-size: 35px;
+  }
+  .address__close {
+    top: 20px;
+    right: 20px;
   }
 
   .cart {
